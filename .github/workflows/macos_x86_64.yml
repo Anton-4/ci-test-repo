@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: cachix/install-nix-action@v15
       - run: |
-         wget https://www.dropbox.com/s/6n2jhvi8voz24mv/roc_x86_64_mac.tar.gz?dl=1
+         wget https://www.dropbox.com/s/l97xioamd1crnw6/roc_x86_64_mac.tar.gz?dl=1
          mv ./roc_x86_64_mac.tar.gz?dl=1 ./roc_x86_64_mac.tar.gz
          tar -xzvf roc_x86_64_mac.tar.gz
          cd folders/roc

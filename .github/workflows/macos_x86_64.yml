@@ -1,0 +1,17 @@
+on: [pull_request]
+
+name: test nix on macOS x86_64
+
+jobs:
+  test-nix-build:
+    name: test nix-build
+    runs-on: [macos-12]
+    timeout-minutes: 90
+    steps:
+      - uses: cachix/install-nix-action@v15
+      - run:
+      - run: |
+         wget https://www.dropbox.com/s/5w5uqlu9lt1460u/roc_x86_64_mac.tar.gz?dl=1
+         mv ./roc_x86_64_mac.tar.gz?dl=1 ./roc_x86_64_mac.tar.gz
+         tar -xzvf roc_x86_64_mac.tar.gz
+         nix-build
